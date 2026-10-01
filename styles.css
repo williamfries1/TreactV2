@@ -6,23 +6,162 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
+  color: #243E63;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   max-width: 100vw;
-  padding: 32px;
+  overflow-x: hidden;
 }
 
-.nav__bar {
+.row {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  padding: 96px 0;
+}
+
+section {
+  padding: 0 32px;
+}
+
+/* NAVIGATION BAR */
+
+nav {
+  padding-top: 32px;
+  display: flex;
+}
+
+.nav__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__logo {
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  margin: 12px 0;
+  padding-bottom: 6px;
+}
+
+.nav__logo--text {
+  margin-left: 12px;
+  padding-bottom: 4px;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+} 
+
+.nav__logo--img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
 }
 
 .nav__link {
-  text-decoration: none;
+  margin: 0 24px;
 }
 
-li {
-  list-style: none;
+.nav__link {
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 4px;
+  letter-spacing: 0.4px;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: all 300ms;
+}
+
+.nav__link--primary {
+  width: auto;
+  margin: 0;
+  padding: 12px 32px;
+  margin-top: 4px;
+  color: white;
+  background-color: #6415ff;
+  border: none;
+  border-radius: 500px;
+  line-height: 1.5;
+  transition: all 300ms ease;
+}
+
+.nav__link--primary:hover {
+  background-color: #5011CC;
+  color: white;
+}
+
+.nav__login {
+  margin-left: 48px;
+}
+
+/* HEADER ABOUT US */
+
+header .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__description {
+  width: 40%;
+}
+
+.header__description--para {
+  margin: 32px 0;
+}
+
+.header__email {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  max-width: 448px;
+  height: 68px;
+  position: relative;
+}
+
+.header__email--btn {
+  font-size: 16px;
+  font-weight: 700;
+  width: 160px;
+  padding: 16px;
+  color: white;
+  border: none;
+  background-color: #6415ff;
+  border-radius: 500px;
+  height: calc(100% -16px);
+  margin: 8px;
+  z-index: 2;
+  transition: all 300ms ease;
+}
+
+.header__email--btn:hover {
+  background-color: #5011CC;
+}
+
+.header__email--input {
+  width: 100%;
+  padding: 20px 192px 20px 32px;
+  color: #243E63;
+  font-size: 16px;
+  font-weight: 500;
+  border: 2px solid #E5E7EB;
+  border-radius: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: border-color 300ms;
 }
